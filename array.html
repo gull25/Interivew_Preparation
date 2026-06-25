@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //   let target = 15;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     for (let j = i + 1; j < arr.length; j++) {
+      //       if (arr[i] + arr[j] === target) {
+      //         console.log(`(${i}, ${j})`);
+      //         document.write(`(${i}, ${j})`);
+      //       }
+      //     }
+      //   }
+
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //   let target = 15;
+
+      //   let check = {};
+
+      //   for (let i = 0; i < arr.length; i++) {
+      //     let neededNumber = target - arr[i];
+
+      //     if (check[neededNumber] !== undefined) {
+      //       document.write(`(${check[neededNumber]}, ${i})`);
+      //     }
+
+      //     check[arr[i]] = i;
+      //   }
+
+      //   function reversedString(str) {
+      //     reversed = "";
+      //     for (let char of str) {
+      //       reversed = char + reversed;
+      //     }
+      //     document.write(reversedString("Khan"));
+      //   }
+
+      //   function isPalindrome(str) {
+      //     const reversed = str.split("").reverse().join("");
+      //     return str === reversed;
+      //   }
+      //   document.write(isPalindrome("Madam"));
+
+      //find Palindrome with more optimize method:
+      //   function isPalindrome(str) {
+      //     let left = 0;
+      //     let right = str.length - 1;
+      //     while (left < right) {
+      //       if (str[left] !== str[right]) {
+      //         return false;
+      //       }
+      //       left++;
+      //       right--;
+      //     }
+      //     return true;
+      //   }
+      //   console.log(isPalindrome("Khan"));
+      //   console.log(isPalindrome("madam"));
+
+      //First Non-Repeating Character
+      //   function firstNonRepetingString(str) {
+      //     for (let char of str) {
+      //       if (str.indexOf(char) === str.lastIndexOf(char)) { // for first repeating char we use !== this
+      //         return char;
+      //       }
+      //     }
+      //     return null;
+      //   }
+      //   console.log(firstNonRepetingString("abccddef"));
+
+      // function findMinMax(arr) {
+      //   let min = arr[0],
+      //     max = arr[0];
+      //   for (let num of arr) {
+      //     if (num < min) min = num;
+      //     if (num > max) max = num;
+      //   }
+      //   return { min, max };
+      // }
+      // console.log(findMinMax([10, 3, 88, 8]));
+
+      // import React,{lazy,Suspense} from "react";
+      // const AdminPanel = lazy(()=>import("./AdminPanel"));
+      // function App(){
+      //   return (
+      //     <>
+      //     <h1>Welcome</h1>
+      //     <Suspense fallback= {<div> Loading...</div>}>
+      //       <AdminPanel/>
+      //       </Suspense>
+      //     </>
+      //   );
+      // }
+
+      // export default App;
+
+      //Missing Number Problem:
+      //  function findMissingNumber(arr,n){
+      //   const total = (n*(n+1))/2;
+      //   const sum = arr.reduce((a,b)=>a+b,0)
+      //   return total-sum;
+      //  }
+      //  console.log(findMissingNumber([1,2,4,5,6],6))
+
+      function findMissingNumber(arr, n) {
+        const total = (n * (n + 1)) / 2;
+        const sum = arr.reduce((a, b) => a + b, 0) + 1;
+        return total - sum;
+      }
+      console.log(findMissingNumber([1, 2, 3, 4, 6], 6));
+
+      //Two Sum Problem:
+      //  function twoSum(arr,target){
+      //   const seen = new Map();
+      //   for(let i=0;i<arr.length;i++){
+      //     const diff = target - arr[i];
+      //     if(seen.has(diff)){
+      //       return [diff, arr[i]];
+      //     }
+      //     seen.set(arr[i],i);
+      //   }
+      //   return [];
+      //  }
+
+      //  console.log(twoSum([2,4,6,8,9],12));
+
+      //Given an array of integers and a target value k, find and print all unique pairs of numbers in the array that add up exactly to k
+      // const arr = [1, 2, 3, 4, 5, 6,7,8];
+      // const k = 8;
+      // for (let i = 0; i < arr.length; i++) {
+      //   for (let j = i + 1; j < arr.length; j++) {
+      //     if (arr[i] + arr[j] === k) {
+      //       console.log([arr[i], arr[j]]);
+      //     }
+      //   }
+      // }
+
+      //Reverse a String:
+      // function reverseString(str) {
+      //   let reversed = "";
+      //   for (let char of str) {
+      //     reversed = char + reversed;
+      //   }
+      //   return reversed;
+      // }
+      // console.log(reverseString("Gul Rahman"));
+    </script>
+  </body>
+</html>
