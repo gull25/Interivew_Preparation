@@ -58,16 +58,23 @@
       //   console.log(isPalindrome("Khan"));
       //   console.log(isPalindrome("madam"));
 
-      //First Non-Repeating Character
-      //   function firstNonRepetingString(str) {
-      //     for (let char of str) {
-      //       if (str.indexOf(char) === str.lastIndexOf(char)) { // for first repeating char we use !== this
-      //         return char;
-      //       }
+      //Given a string find and return the First Non-Repeating Character
+      // function firstNonRepChar(str) {
+      //   str = str.toLowerCase();
+      //   let freq = {};
+      //   for (let char of str) {
+      //     if (freq[char]) {
+      //       freq[char] = freq[char] + 1;
+      //     } else {
+      //       freq[char] = 1;
       //     }
-      //     return null;
       //   }
-      //   console.log(firstNonRepetingString("abccddef"));
+      //   for (let key in freq) {
+      //     if (freq[key] === 1) return key;
+      //   }
+      //   console.log(freq);
+      // }
+      // console.log(firstNonRepChar("KKarachi"));
 
       // function findMinMax(arr) {
       //   let min = arr[0],
@@ -102,13 +109,6 @@
       //   return total-sum;
       //  }
       //  console.log(findMissingNumber([1,2,4,5,6],6))
-
-      function findMissingNumber(arr, n) {
-        const total = (n * (n + 1)) / 2;
-        const sum = arr.reduce((a, b) => a + b, 0) + 1;
-        return total - sum;
-      }
-      console.log(findMissingNumber([1, 2, 3, 4, 6], 6));
 
       //Two Sum Problem:
       //  function twoSum(arr,target){
@@ -145,6 +145,30 @@
       //   return reversed;
       // }
       // console.log(reverseString("Gul Rahman"));
+
+      //Write a JavaScript function to find all duplicate (repeated) elements in an array.
+      // function findRepeated(arr) {
+      //   let freq = {};
+      //   let repeated = [];
+      //   for (let i = 0; i < arr.length; i++) {
+      //     let num = arr[i];
+      //     if (freq[num] === undefined) {
+      //       freq[num] = 1;
+      //     } else {
+      //       freq[num] = freq[num] + 1;
+      //     }
+      //   }
+      //   for (let [key] in freq) {
+      //     if (freq[key] > 1) {
+      //       repeated.push(Number(key));
+      //     }
+      //   }
+      //   return repeated;
+      // }
+      // console.log(findRepeated([1, 2, 3, 4, 5, 5, 6, 3, 8]));
+
+
+      
     </script>
   </body>
 </html>
