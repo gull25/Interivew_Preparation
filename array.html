@@ -167,8 +167,71 @@
       // }
       // console.log(findRepeated([1, 2, 3, 4, 5, 5, 6, 3, 8]));
 
+      //Sorting:
+      // const arr = [1, 2, 3, 45, 6, 7, 3, 4, 5];
+      // for (let i = 0; i < arr.length - 1; i++) {
+      //   for (let j = 0; j < arr.length - i - 1; j++) {
+      //     if (arr[j] < arr[j + 1]) {
+      //       [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      //     }
+      //   }
+      // }
+      // console.log("Ascending", arr);
 
-      
+      // for (let i = 0; i < arr.length - 1; i++) {
+      //   for (let j = 0; j < arr.length - i - 1; j++) {
+      //     if (arr[j] > arr[j + 1]) {
+      //       [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      //     }
+      //   }
+      // }
+      // console.log("Descending", arr);
+
+      //Merge two arrays manually and then sort them manually:
+      // let arr1 = [5, 1, 9];
+      // let arr2 = [3, 7, 2];
+      // let merged = [];
+      // for (let i = 0; i < arr1.length; i++) {
+      //   merged[merged.length] = arr1[i];
+      // }
+      // for (let i = 0; i < arr2.length; i++) {
+      //   merged[merged.length] = arr2[i];
+      // }
+      // for (let i = 0; i < merged.length - 1; i++) {
+      //   for (let j = 0; j < merged.length - i - 1; j++) {
+      //     if (merged[j] > merged[j + 1]) {
+      //       [merged[j], merged[j + 1]] = [merged[j + 1], merged[j]];
+      //     }
+      //   }
+      // }
+      // console.log("Merged and Sorted:", merged);
+
+      //Suposse we have two strings we have to find whether they are Anagram or not.
+      // function isAnagram(str1, str2) {
+      //   if (str1.length !== str2.length) return false;
+
+      //   let freq1 = {};
+      //   let freq2 = {};
+      //   for (let i = 0; i < str1.length; i++) {
+      //     let c = str1[i].toLowerCase();
+      //     freq1[c] = (freq1[c] || 0) + 1;
+      //   }
+
+      //   for (let i = 0; i < str2.length; i++) {
+      //     let c = str2[i].toLowerCase();
+      //     freq2[c] = (freq2[c] || 0) + 1;
+      //   }
+
+      //   for (let key in freq1) {
+      //     if (freq1[key] !== freq2[key]) {
+      //       return false;
+      //     }
+      //   }
+      //   return true;
+      // }
+
+      // console.log(isAnagram("Silent", "Listen"));
+      // console.log(isAnagram("Hello", "World"));
     </script>
   </body>
 </html>
