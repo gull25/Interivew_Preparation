@@ -271,7 +271,30 @@
       // let arr = [0, 1, 0, 1, 1, 0, 0, 1];
       // console.log(sortBinaryArray(arr));
 
-      
+      //Binary Array:
+      const binarySearch = (arr, val) => {
+        const sortedArr = sortArr(arr);
+
+        let low = 0;
+        let high = sortedArr.length - 1;
+
+        while (low <= high) {
+          const mid = Math.floor((low + high) / 2);
+
+          if (sortedArr[mid] === val) {
+            return { arr: sortedArr, index: mid };
+          } else if (sortedArr[mid] < val) {
+            low = mid + 1;
+          } else {
+            high = mid - 1;
+          }
+        }
+
+        return {
+          arr: sortedArr,
+          index: -1,
+        };
+      };
     </script>
   </body>
 </html>
