@@ -272,29 +272,48 @@
       // console.log(sortBinaryArray(arr));
 
       //Binary Array:
-      const binarySearch = (arr, val) => {
-        const sortedArr = sortArr(arr);
+      // const binarySearch = (arr, val) => {
+      //   const sortedArr = sortArr(arr);
 
-        let low = 0;
-        let high = sortedArr.length - 1;
+      //   let low = 0;
+      //   let high = sortedArr.length - 1;
 
-        while (low <= high) {
-          const mid = Math.floor((low + high) / 2);
+      //   while (low <= high) {
+      //     const mid = Math.floor((low + high) / 2);
 
-          if (sortedArr[mid] === val) {
-            return { arr: sortedArr, index: mid };
-          } else if (sortedArr[mid] < val) {
-            low = mid + 1;
-          } else {
-            high = mid - 1;
-          }
+      //     if (sortedArr[mid] === val) {
+      //       return { arr: sortedArr, index: mid };
+      //     } else if (sortedArr[mid] < val) {
+      //       low = mid + 1;
+      //     } else {
+      //       high = mid - 1;
+      //     }
+      //   }
+
+      //   return {
+      //     arr: sortedArr,
+      //     index: -1,
+      //   };
+      // };
+      //  console.log(sortArr([1,2,6,3,89,45,32]))
+      // console.log(binarySearch([1,2,6,3,89,45,32],32))
+
+      //Suppose we have a given array and you have to reverse it without using reversed method
+      function reverseString(arr) {
+        let start = 0;
+        let end = arr.length - 1;
+
+        while (start < end) {
+          let temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+
+          start++;
+          end--;
         }
-
-        return {
-          arr: sortedArr,
-          index: -1,
-        };
-      };
+        return arr;
+      }
+      console.log(reverseString([10, 20, 30, 40, 50]));
     </script>
   </body>
 </html>
