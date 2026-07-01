@@ -299,21 +299,45 @@
       // console.log(binarySearch([1,2,6,3,89,45,32],32))
 
       //Suppose we have a given array and you have to reverse it without using reversed method
-      function reverseString(arr) {
-        let start = 0;
-        let end = arr.length - 1;
+      // function reverseString(arr) {
+      //   let start = 0;
+      //   let end = arr.length - 1;
 
-        while (start < end) {
-          let temp = arr[start];
-          arr[start] = arr[end];
-          arr[end] = temp;
+      //   while (start < end) {
+      //     let temp = arr[start];
+      //     arr[start] = arr[end];
+      //     arr[end] = temp;
 
-          start++;
-          end--;
+      //     start++;
+      //     end--;
+      //   }
+      //   return arr;
+      // }
+      // console.log(reverseString([10, 20, 30, 40, 50]));
+
+      //   // Suppose we have a string having one complete sentence and you have to find the longest word in it.
+      //   let str = "i love javascript programming";
+      //   let words = str.split(" ");
+      //   let longest = words[0];
+      //   for (let word of words) {
+      //     if (word.length > longest.length) { // We can use it to find the smallest word as well
+      //       longest = word;
+      //     }
+      //   }
+      //   console.log(longest);
+
+      //Suppose you have a sentence of string .You have to find the number of words in it.
+      function countWords(str) {
+        let count = 1;
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === " ") {
+            count++;
+          }
         }
-        return arr;
+        return count;
       }
-      console.log(reverseString([10, 20, 30, 40, 50]));
+      console.log(countWords("I love java and script and math"));
+      //
     </script>
   </body>
 </html>
